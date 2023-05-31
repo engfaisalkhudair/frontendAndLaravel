@@ -1,0 +1,2706 @@
+:root {
+    --main_color: #FF914D;
+    --sec_color: #FFFAF8;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #02323D;
+}
+
+*{
+    direction: rtl;
+}
+body{
+    font-family: 'Cairo', sans-serif;
+}
+.container{
+    padding-left:  100px;
+    padding-right:  100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
+i{
+    font-size: 18px;
+}
+
+/* ===Begin::custom scrollbar === */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* ===End::custom scrollbar === */
+/* ===Begin::nav === */
+
+nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 81px;
+    z-index: 9999;
+}
+nav .logo-image{
+    width: 325px;
+    position: relative;
+}
+nav .logo-image img{
+    max-width: 100%;
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+    width: 104px;
+}
+nav .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .container .user-info{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+nav .container .user-info .image-user{
+    box-sizing: border-box;
+    border: 1.5px solid #26B195;
+    background: #F6FCFB;
+    border-radius: 50%;
+    padding: 8px;
+
+}
+nav .container .user-info .details-user  {
+    padding-left: 30px;
+    padding-right: 10px;
+}
+nav .container .user-info .details-user .user-name{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #1C2E5A;
+    display: block;
+}
+nav .container .user-info .details-user .user-type{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #C7C7C7;
+}
+nav .container .user-info  i {
+    color: #C7C7C7;
+    font-size: 11.5px;
+}
+nav .container .setting-user .icon-not{
+    padding-left: 50px;
+    position: relative;
+}
+nav .container .setting-user .icon-not i{
+}
+nav .container .setting-user .icon-not i{
+    font-size: 28px;
+}
+nav .container .setting-user .icon-not::after{
+    content: "";
+    width:1.5px;
+    height: 45px ;
+    background: #C7C7C7;
+    left: 10px;
+    top: -10px;
+    position: absolute;
+}
+nav .container .setting-user .icon-not::before{
+    content: "";
+    width:15px;
+    height: 15px;
+    background: #EE4D42;
+    position: absolute;
+    border-radius: 50%;
+    right: -5px;
+    top: -5px;
+    border: 3px solid #fff;
+
+}
+nav .container .setting-user .text-lan  {
+    position: relative;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #B5B5B5;
+    margin-right: 20px;
+}
+nav .container .setting-user .text-lan::before{
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background: #979797;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+nav .style-icon-nav{
+    font-size: 18px;
+    margin-right: 20px;
+    display: none;
+    transition: 1s ;
+}
+nav .phone-style{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    display: none;
+    background: #F8F8F8;
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    padding: 15px 20px;
+    width: 150px;
+    border-radius: 8px;
+}
+#show-details-phone-user-open{
+    margin-right: 15px;
+}
+nav #show-details-phone-user-close{
+    display: none;
+    margin-right: 15px;
+}
+nav .phone-style .details-user-style{
+    padding-bottom: 15px;
+    border-bottom: 1px solid #000000;
+}
+nav .phone-style .details-user-style .user-name{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #1C2E5A;
+    display: block;
+}
+nav .phone-style .details-user-style .user-type{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    color: #C7C7C7;
+}
+nav .phone-style .setting-user-style{
+    padding-top: 15px;
+}
+nav .container .setting-user-style .icon-not{
+    padding-left: 20px;
+    position: relative;
+}
+nav .container .setting-user-style .icon-not i{
+    font-size: 18px;
+    padding-right: 0;
+}
+nav .container .setting-user-style .icon-not::after{
+    content: "";
+    width:1.5px;
+    height: 100% ;
+    background: #C7C7C7;
+    left: 10px;
+    top: 0;
+    position: absolute;
+}
+nav .container .setting-user-style .icon-not::before{
+    content: "";
+    width:8px;
+    height: 8px;
+    background: #EE4D42;
+    position: absolute;
+    border-radius: 50%;
+    right: 0;
+    top: 4px;
+    border: 1.5px solid #fff;
+
+}
+nav .container .setting-user-style .text-lan  {
+    font-size: 16px;
+    margin-right: 10px;
+}
+nav .container .setting-user .text-lan::before{
+    content: "";
+    width: 100%;
+    height: 1.5px;
+    background: #979797;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+}
+/*  Style Responsive --nav--  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    nav #main-con-sid-open{
+        display: inline-block;
+    }
+    nav {
+        justify-content: space-between;
+    }
+    nav .logo-image{
+        width: 150px;
+    }
+    .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        width: auto !important;
+    }
+    nav .container {
+        padding-left: 8px;
+        padding-right: 0px;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+    nav .user-info i {
+    }
+    nav .user-info i{
+        padding-right: 15px;
+        cursor: pointer;
+    }
+    nav .container .user-info .image-user {
+        padding: 4px;
+    }
+    nav .container .user-info .details-user {
+        padding-left: 15px;
+        padding-right: 15px;
+        display: none;
+    }
+    nav .container .user-info .details-user .user-name {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    nav .container .user-info .details-user .user-type {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    nav .setting-user{
+        display: none;
+    }
+}
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (min-width: 600px) {
+    nav #main-con-sid-open{
+        display: inline-block;
+    }
+    nav .logo-image{
+        width: 150px;
+        margin-left: 50px;
+    }
+    nav .container {
+        padding-left: 8px;
+        padding-right: 0px;
+        margin-left: 20px;
+        margin-right: 0;
+    }
+
+    nav .user-info i{
+        padding-right: 15px;
+        cursor: pointer;
+    }
+    nav .container .user-info .image-user {
+        padding: 4px;
+    }
+    nav .container .user-info .details-user {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    nav .container .user-info .details-user .user-name {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    nav .container .user-info .details-user .user-type {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    nav .container .setting-user .icon-not {
+        padding-left: 30px;
+    }
+    nav .container .setting-user .icon-not i {
+        font-size: 22px;
+    }
+    nav .container .setting-user .text-lan {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) {
+    nav #main-con-sid-open{
+        display: none;
+    }
+    nav .logo-image {
+        width: 280px;
+        position: relative;
+    }
+    nav .logo-image img{
+        width: 80px;
+    }
+    nav .container {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav .container .user-info .image-user {
+        padding: 5px;
+    }
+    nav .container .user-info .details-user {
+        padding-left: 25px;
+    }
+    nav .container .user-info .details-user .user-name {
+        font-size: 12px;
+    }
+    nav .container .user-info .details-user .user-type {
+        font-size: 12px;
+    }
+    nav .container .setting-user .icon-not i {
+        font-size: 22px;
+    }
+    nav .container .setting-user .icon-not::before {
+        width: 12px;
+        height: 12px;
+        background: #EE4D42;
+        position: absolute;
+        border-radius: 50%;
+        right: -4px;
+        top: 0;
+        border: 3px solid #fff;
+    }
+    nav .container .setting-user .icon-not {
+        padding-left: 35px;
+        position: relative;
+    }
+    nav .container .setting-user .text-lan {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    nav .container .setting-user .icon-not::after {
+        content: "";
+        width: 1.5px;
+        height: 40px;
+        background: #C7C7C7;
+        left: 10px;
+        top: -5px;
+        position: absolute;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    nav .logo-image{
+        width: 325px;
+        position: relative;
+    }
+    nav .logo-image img{
+        max-width: 100%;
+        position: absolute;
+        left: 50%;top: 50%;
+        transform: translate(-50%,-50%);
+        width: 104px;
+    }
+    nav .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 100px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    nav .container .user-info{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    nav .container .user-info .image-user{
+        box-sizing: border-box;
+        border: 1.5px solid #26B195;
+        background: #F6FCFB;
+        border-radius: 50%;
+        padding: 8px;
+
+    }
+    nav .container .user-info .details-user  {
+        padding-left: 30px;
+        padding-right: 10px;
+    }
+    nav .container .user-info .details-user .user-name{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #1C2E5A;
+        display: block;
+    }
+    nav .container .user-info .details-user .user-type{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #C7C7C7;
+    }
+    nav .container .user-info  i {
+        color: #C7C7C7;
+        font-size: 11.5px;
+    }
+    nav .container .setting-user .icon-not{
+        padding-left: 50px;
+        position: relative;
+
+    }
+    nav .container .setting-user .icon-not i{
+        font-size: 28px;
+    }
+    nav .container .setting-user .icon-not::after{
+        content: "";
+        width:1.5px;
+        height: 45px ;
+        background: #C7C7C7;
+        left: 10px;
+        top: -10px;
+        position: absolute;
+    }
+    nav .container .setting-user .icon-not::before{
+        content: "";
+        width:15px;
+        height: 15px;
+        background: #EE4D42;
+        position: absolute;
+        border-radius: 50%;
+        right: -5px;
+        top: -5px;
+        border: 3px solid #fff;
+
+    }
+    nav .container .setting-user .text-lan  {
+        position: relative;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #B5B5B5;
+        margin-right: 20px;
+    }
+    nav .container .setting-user .text-lan::before{
+        content: "";
+        width: 100%;
+        height: 1.5px;
+        background: #979797;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+    nav .style-icon-nav{
+        font-size: 18px;
+        margin-right: 20px;
+        display: none;
+        transition: 1s ;
+    }
+    nav .phone-style{
+        position: absolute;
+        top: 45px;
+        left: 0;
+        display: none;
+        background: #F8F8F8;
+        box-shadow: 0 2px 5px rgba(0,0,0,.2);
+        padding: 15px 20px;
+        width: 150px;
+        border-radius: 8px;
+    }
+    nav #show-details-phone-user-close{
+        display: none;
+    }
+    nav .phone-style .details-user-style{
+        padding-bottom: 15px;
+        border-bottom: 1px solid #000000;
+    }
+    nav .phone-style .details-user-style .user-name{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #1C2E5A;
+        display: block;
+    }
+    nav .phone-style .details-user-style .user-type{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #C7C7C7;
+    }
+    nav .phone-style .setting-user-style{
+        padding-top: 15px;
+    }
+    nav .container .setting-user-style .icon-not{
+        padding-left: 20px;
+        position: relative;
+    }
+    nav .container .setting-user-style .icon-not i{
+        font-size: 18px;
+        padding-right: 0;
+    }
+    nav .container .setting-user-style .icon-not::after{
+        content: "";
+        width:1.5px;
+        height: 100% ;
+        background: #C7C7C7;
+        left: 10px;
+        top: 0;
+        position: absolute;
+    }
+    nav .container .setting-user-style .icon-not::before{
+        content: "";
+        width:8px;
+        height: 8px;
+        background: #EE4D42;
+        position: absolute;
+        border-radius: 50%;
+        right: 0;
+        top: 4px;
+        border: 1.5px solid #fff;
+
+    }
+    nav .container .setting-user-style .text-lan  {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    nav .container .setting-user .text-lan::before{
+        content: "";
+        width: 100%;
+        height: 1.5px;
+        background: #979797;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+}
+/* ===End::nav === */
+
+/* ===Begin::sidebar === */
+#main-sid{
+    background: #F8F8F8;
+    width: 269px;
+    position: fixed;
+    height: 100%;
+    right: 0;
+    margin-top: 81px;
+    overflow: auto;
+    padding-bottom: 100px;
+    direction: ltr;
+    z-index: 999;
+}
+#main-sid .link-pages{
+    padding-top: 40px;
+    padding-bottom: 80px;
+    position: relative;
+}
+#main-sid .link-pages::before{
+    content: "";
+    width: 80%;
+    height: 1px;
+    bottom: 0;
+    right: 10%;
+    background: #C7C7C7;
+    position:absolute;
+}
+#main-sid .link-pages  li a{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #7E7E7E;
+}
+#main-sid .link-pages  li:not(:last-child){
+    padding-bottom: 20px;
+}
+#main-sid .link-pages  li:first-child a {
+    color: #1C2E5A;
+}
+#main-sid .link-pages  li a span{
+    padding-right: 10px;
+}
+#main-sid .link-pages  li.active a {
+    color: #26B195;
+}
+#main-sid .about-website{
+    padding-top: 15px;
+    padding-right: 40px;
+    padding-bottom: 100px;
+}
+#main-sid .about-website span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #7E7E7E;
+    padding-right: 7px;
+    padding-left: 10px;
+}
+#main-sid .about-website svg{
+    color: #7E7E7E;
+    font-size: 13px;
+    font-weight: bold;
+}
+#main-sid .logout{
+    position: relative;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+#main-sid .logout span{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 34px;
+    color: #EE4D42;
+    padding-right: 10px;
+}
+/*  Style Responsive --main-sid--  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #main-sid{
+        display: none;
+        width: 229px;
+    }
+    #main-sid .link-pages  li a {
+        font-size: 14px;
+    }
+    #main-sid .about-website span {
+        font-size: 14px;
+    }
+    #main-sid .logout span {
+        font-size: 14px;
+    }
+}
+/* Small devices (portrait tablets and large phones, 768  ) */
+@media only screen and (min-width: 600px) {
+    #main-sid{
+        display: none;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 768px) {
+    #main-sid {
+        width: 190px;
+        display: inline-block;
+    }
+    #main-sid .link-pages {
+        padding-top: 50px;
+        padding-bottom: 60px;
+        padding-right: 20px;
+    }
+    #main-sid .link-pages  li a {
+        font-size: 14px;
+    }
+    #main-sid .about-website {
+        padding-right: 20px;
+        padding-bottom: 80px;
+    }
+    #main-sid .about-website span {
+        font-size: 14px;
+    }
+    #main-sid .about-website i {
+        font-size: 11px;
+    }
+    #main-sid .logout {
+        padding-right: 20px;
+    }
+    #main-sid .logout span {
+        font-size: 16px;
+        line-height: 34px;
+        color: #EE4D42;
+        padding-right: 10px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #main-sid{
+        background: #F8F8F8;
+        width: 269px;
+        position: fixed;
+        height: 100%;
+        right: 0;
+        margin-top: 81px;
+        overflow: auto;
+        padding-bottom: 100px;
+        direction: ltr;
+        z-index: 999;
+    }
+
+    #main-sid .link-pages{
+        padding-top: 40px;
+        padding-bottom: 80px;
+        position: relative;
+        padding-right: 40px;
+    }
+    #main-sid .link-pages::before{
+        content: "";
+        width: 80%;
+        height: 1px;
+        bottom: 0;
+        right: 10%;
+        background: #C7C7C7;
+        position:absolute;
+    }
+    #main-sid .link-pages  li a{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #7E7E7E;
+    }
+    #main-sid .link-pages  li:not(:last-child){
+        padding-bottom: 20px;
+    }
+    #main-sid .link-pages  li:first-child a {
+        color: #1C2E5A;
+    }
+    #main-sid .link-pages  li a span{
+        padding-right: 10px;
+    }
+    #main-sid .link-pages  li.active a {
+        color: #26B195;
+    }
+    #main-sid .about-website{
+        padding-top: 15px;
+        padding-right: 40px;
+        padding-bottom: 100px;
+    }
+    #main-sid .about-website span{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #7E7E7E;
+        padding-right: 7px;
+        padding-left: 10px;
+    }
+    #main-sid .about-website i{
+        color: #7E7E7E;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    #main-sid .logout{
+        position: relative;
+        padding-right: 40px;
+        padding-bottom: 30px;
+    }
+    #main-sid .logout span{
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 34px;
+        color: #EE4D42;
+        padding-right: 10px;
+    }
+}
+/* ===End::sidebar === */
+
+/* ===Begin::Content Page === */
+
+.main-content{
+    position: relative;
+    padding-right: 259px;
+    padding-top: 100px;
+}
+.main-content .top-title-page{
+    padding-top: 30px;
+}
+.main-content .top-title-page h4{
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 52px;
+    color: #26B195;
+    padding-bottom: 5px;
+}
+.main-content .top-title-page h6 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #26B195;
+}
+.main-content .top-title-page h6 span{
+    color: #979797;
+}
+.main-content .buying-details{
+    width: 55%;
+    margin: 40px auto;
+    text-align: center;
+    position: relative;
+}
+.main-content .buying-details h5{
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 34px;
+    color: #080D1B;
+}
+.main-content .buying-details .buying-path{
+    margin-top: 60px;
+    position: relative;
+}
+.main-content .buying-details .buying-path::after{
+    content: "";
+    width: 84%;
+    height: 5px;
+    background: #EBEBEB;
+    position: absolute;
+    border-radius: 8px;
+    top: 0;
+    right: 8%;
+}
+.main-content .buying-details .buying-path.DoneCheck1::before{
+    content: "";
+    width: 45%;
+    height: 5px;
+    background: #26B195;
+    position: absolute;
+    border-radius: 8px;
+    top: 0;
+    right: 5%;
+    z-index: 2;
+}
+.main-content .buying-details .buying-path span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #979797;
+    position: relative;
+}
+.main-content .buying-details .numbers{
+    position: relative;
+    top: -40px;
+    display: flex;
+    width:84%;
+    right: 8%;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-content .buying-details .numbers span.active {
+    color: #26B195;
+}
+.main-content .buying-details .names{
+    position: relative;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    right: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.main-content .buying-details .names span{
+    position: relative;
+}
+.main-content .buying-details .names span.active{
+    font-weight: 700;
+    font-size: 14px;
+    color: #26B195;
+}
+.main-content .buying-details .names span.active::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #26B195;
+    right: 20%;
+    top: -32px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+    border: 2px solid #fff;
+}
+.main-content .buying-details .names span.DoneCheck::after{
+    font-family: "Font Awesome 6 Free";
+    content: "\f00c";
+    width: 20px;
+    height: 20px;
+    background: #26B195;
+    right: 20%;
+    top: -33px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 99;
+    border: 2px solid #fff;
+    color: #fff;
+    line-height: 20px;
+    box-shadow: 0 0px 0 4px rgba(38, 177, 149, 0.56);
+}
+
+
+.main-content .buying-information{
+    padding-top: 48px;
+    text-align: right;
+    width: 90%;
+    position: relative;
+}
+.main-content .buying-information h5{
+    color: #26B195;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 34px;
+    color: #26B195;
+    position: relative;
+}
+.main-content .buying-information h5::after{
+    content: '';
+    width: 65%;
+    height: 1.5px;
+    background: #26B195;
+    position: absolute;
+    top: 55%;
+    left: 0;
+}
+.main-content  form{
+    position: relative;
+    text-align: right;
+}
+.main-content  form .form-group{
+    margin-top: 25px;
+    position: relative;
+}
+.main-content  form label{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #1C2E5A;
+}
+.main-content  form label span.optional{
+    padding-right: 2px;
+    color: #979797;
+}
+.main-content  form .form-group input{
+    height: 55px;
+    border-radius: 27.5px;
+    background: #F1F1F1;
+    border: 1.5px solid #26B195;
+    box-sizing: border-box;
+    padding-right: 35px;
+    margin-top: 10px;
+
+}
+.main-content  form .form-check  {
+    margin-top: 25px;
+
+}
+.main-content  form .form-check input {
+    float: inherit;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 3px;
+    border: 1.5px solid #26B195;
+}
+
+
+.form-check-input:checked {
+    background-color: #26B195;
+    border-color: #26B195;
+}
+.main-content  form .form-check label{
+    margin-right: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #080D1B;
+}
+.main-content  input::placeholder{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #979797;
+}
+.main-content  form .form-group .choose-agree{
+    display: flex;
+}
+.main-content  form .form-group .choose-agree span{
+    padding-top: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #080D1B;
+}
+.main-content  form .form-group .choose-agree label{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #1C2E5A;
+    margin-right: 10px;
+    padding-top: 8px;
+}
+.main-content  form .form-group .choose-agree .form-check{
+    display: flex;
+    align-items: center;
+    margin-right: 55px;
+}
+.main-content  form .form-group .choose-agree input{
+}
+.main-content  form .form-group span.upload-file{
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background: #26B195;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 27px;
+    font-size: 16px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.main-content  form .form-group span.upload-file img{
+    padding-left: 5px;
+    position: relative;
+    bottom: 3px;
+}
+.main-content  form .warning-input{
+    padding-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #979797;
+}
+.main-content form .warning-input img{
+    padding-left: 10px;
+}
+.main-content form .warning-input2{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #979797;
+    padding-top: 12px;
+
+}
+.main-content  form select{
+    height: 55px;
+    border-radius: 27.5px;
+    background: #F1F1F1;
+    border: 1.5px solid #26B195;
+    box-sizing: border-box;
+    padding-right: 35px;
+    margin-top: 10px;
+}
+.main-content  form select:optional{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #979797;
+}
+.main-content form .select-icon{
+    position: absolute;
+    left: 38px;
+    bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.main-content .buying-information .installment-calculator{
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #C7C7C7;
+    padding: 25px 27px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+
+}
+.main-content .buying-information .installment-calculator h4{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 30px;
+    color: #26B195;
+}
+.main-content .buying-information .installment-calculator .details-buying-calculator .head-details{
+    padding-bottom: 5px;
+    padding-top: 10px;
+}
+.main-content .buying-information .installment-calculator .details-buying-calculator .head-details span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #979797;
+}
+.main-content .buying-information .installment-calculator .details-buying-calculator .head-details span:not(:first-child) {
+    padding-right: 36px;
+}
+.main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 34px;
+    color: #26B195;
+}
+.main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span:not(:first-child) {
+    padding-right: 36px;
+}
+.main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span span{
+    font-size: 12px;
+}
+.installment-calculator .details-buying-calculator .body-details  .cl-plus{
+    color: #979797;
+    position: relative;
+    right: 20px;
+}
+.installment-calculator .details-buying-calculator .body-details  .cl-equal{
+    color: #979797;
+    position: relative;
+    right: 20px;
+}
+.main-content .buying-information .installment-calculator .monthly-installment{
+    padding-top: 25px;
+}
+.main-content .buying-information .installment-calculator .monthly-installment h3{
+    font-weight: 400;
+    font-size: 14px;
+    color: #979797;
+}
+.main-content .buying-information .installment-calculator .monthly-installment a{
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration-line: underline;
+    color: #379BC4;
+    padding-right: 14px;
+}
+.main-content .buying-information .installment-calculator .monthly-installment p {
+    font-weight: 500;
+    font-size: 18px;
+    color: #26B195;
+    margin-bottom: 0;
+}
+.main-content .buying-information .installment-calculator .monthly-installment p span{
+    font-size: 12px;
+
+}
+.main-content .buying-information .supplier-data{
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #C7C7C7;
+    padding: 25px 27px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+}
+.main-content .buying-information .supplier-data .icons-supplier-data{
+    text-align: left;
+}
+.main-content .buying-information .supplier-data .icons-supplier-data svg:first-child{
+    color: #263238;
+    font-size: 18px;
+    padding-left: 22px;
+}
+.main-content .buying-information .supplier-data .icons-supplier-data svg:last-child{
+    color: #EE4D42;
+    font-size: 18px;
+}
+.main-content .buying-information .supplier-data .details-supplier-data{
+    padding-bottom: 33px;
+    border-bottom: 1px solid #DADADA;
+    width: fit-content;
+    padding-top: 15px;
+}
+.main-content .buying-information .supplier-data .details-supplier-data h4{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    color: #1C2E5A;
+}
+.main-content .buying-information .supplier-data .details-supplier-data .head-details{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.main-content .buying-information .supplier-data .details-supplier-data .head-details span{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #979797;
+}
+.main-content .buying-information .supplier-data .details-supplier-data .head-details span:not(:last-child){
+    padding-left: 46px;
+}
+.main-content .buying-information .supplier-data .details-supplier-data .body-details span{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    color: #26B195;
+}
+.main-content .buying-information .supplier-data .details-supplier-data .body-details span:not(:last-child){
+    padding-left: 46px;
+}
+.main-content .buying-information .supplier-data .details-supplier-data .body-details span:first-child {
+    padding-left: 91px;
+}
+.main-content .buying-information .supplier-data  .details-supplier-data .details-connect{
+    display: flex;
+    align-items: center;
+}
+.main-content .buying-information .supplier-data  .details-supplier-data .details-connect .phone{
+    margin-left: 30px;
+}
+.main-content .buying-information .supplier-data  .details-supplier-data .details-connect span{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 26px;
+    color: #26B195;
+    padding-right: 7px;
+}
+.main-content .buying-information .supplier-data  .details-supplier-data .details-connect img {
+    width: 20px;
+    height: 18px;
+}
+.main-content .buying-information .supplier-data  .details-supplier-data a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: right;
+    text-decoration-line: underline;
+    color: #379BC4;
+    margin-right: 10px;
+}
+
+.btn-primary-main{
+    background: #26B195;
+    border-radius: 27.5px;
+    color: #fff;
+    padding: 13px 45px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    transform: translateX(-100%);
+    margin-top: 15px;
+}
+.btn-primary-main a{
+    color: #fff;
+}
+.btn-primary-main svg{
+    font-size: 11px;
+    padding-right: 15px;
+}
+.btn-primary-main:hover{
+    color : #26B195;
+    border: 1px solid #26B195;
+}
+.btn-primary-main:hover a{
+    color : #26B195;
+}
+.page2-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+}
+.page2-links .btn-primary-main-tow{
+    background: #26B195;
+    border-radius: 27.5px;
+    padding: 13px 45px;
+    text-align: center;
+}
+.page2-links .btn-primary-main-tow a{
+    color: #fff;
+}
+.page2-links .btn-primary-main-tow svg{
+    font-size: 11px;
+    padding-right: 15px;
+}
+.page2-links .btn-primary-main-tow-back{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: #080D1B;
+    margin-left: 24px;
+    padding: 13px 25px;
+    border-radius: 27.5px;
+
+}
+.page2-links .btn-primary-main-tow-back svg{
+    font-size: 11px;
+    padding-left: 15px;
+}
+.page2-links .btn-primary-main-tow:hover{
+    color : #26B195;
+    border: 1px solid #26B195;
+    background: #fff;
+}
+.page2-links .btn-primary-main-tow:hover a{
+    color : #26B195;
+}
+
+/*  Style Responsive --main-content--  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .main-content{
+        position: relative;
+        padding-right: 0px;
+        padding-top: 100px;
+    }
+    .main-content .buying-details{
+        width: 100%;
+    }
+    .main-content .container {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-content .top-title-page {
+        padding-top: 15px;
+    }
+
+    .main-content .top-title-page h4 {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .main-content .top-title-page h6 {
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .main-content .buying-details {
+        margin: 50px auto;
+
+    }
+    .main-content .buying-details h5 {
+        font-size: 16px;
+        line-height: 34px;
+    }
+    .main-content .buying-details .buying-path {
+        margin-top: 60px;
+        position: relative;
+    }
+    .main-content .buying-details .buying-path::after {
+        width: 100%;
+        top: 0;
+        right: 0%;
+    }
+    .main-content .buying-details .names {
+        width: 100%;
+        right: 0;
+    }
+    .main-content .buying-details .numbers {
+        top: -40px;
+        width: 100%;
+        right: 2%;
+    }
+    .main-content .buying-details .buying-path span {
+        font-size: 12px;
+    }
+
+    /*update path */
+    .main-content .buying-details .buying-path.DoneCheck1::before {
+        content: "";
+        width: 53%;
+        height: 5px;
+        background: #26B195;
+        position: absolute;
+        border-radius: 8px;
+        top: 0;
+        right: 0%;
+        z-index: 2;
+    }
+    .main-content .buying-details .names span::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: #EBEBEB;
+        right: 35%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-details .names span:last-child::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: #EBEBEB;
+        right: 80%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-details .names span.active {
+        font-size: 12px;
+    }
+    .main-content .buying-details .names span.active::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: #26B195;
+        right: 0%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-details .buying-path.DoneCheck1 .names span.active::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: #26B195;
+        right: 28%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    /* class active and Done check */
+    .main-content .buying-details .buying-path.DoneCheck1 .names span.active.DoneCheck::after{
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        width: 18px;
+        height: 18px;
+        background: #26B195;
+        right: 0%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+        color: #fff;
+        line-height: 17px;
+        box-shadow: 0 0px 0 4px rgba(38, 177, 149, 0.56);
+    }
+    /*end*/
+    .main-content .buying-details h5 {
+        font-size: 14px;
+        line-height: 34px;
+    }
+    .main-content .buying-information {
+        width: 100%;
+    }
+    .main-content .buying-information h5::after {
+        content: '';
+        width: 65%;
+        height: 1.3px;
+        background: #26B195;
+        position: absolute;
+        top: 55%;
+        left: 0;
+    }
+    .main-content .buying-information form label {
+        font-size: 12px;
+        line-height : 25px;
+    }
+    .main-content .buying-information form input {
+        height: 45px;
+        padding-right: 25px;
+    }
+    .main-content form .form-check label{
+        font-size: 12px;
+        line-height : 25px;
+    }
+    .main-content  form .form-group .choose-agree span {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .main-content  form .form-group .choose-agree label {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .page2-links .btn-primary-main-tow{
+        background: #26B195;
+        border-radius: 27.5px;
+        padding: 13px 25px;
+        font-size: 12px;
+        text-align: center;
+    }
+    .page2-links .btn-primary-main-tow svg {
+        font-size: 9px;
+        padding-right: 15px;
+    }
+    .page2-links .btn-primary-main-tow-back {
+        font-size: 12px;
+        margin-left: 24px;
+    }
+    .main-content .buying-information form input::placeholder {
+        font-size: 14px;
+    }
+    .main-content .buying-information form .form-group span.upload-file {
+        padding: 10px 20px;
+        border-radius: 27px;
+        font-size: 14px;
+        color: #FFFFFF;
+    }
+    .main-content .buying-information form .form-group span.upload-file img {
+        padding-left: 5px;
+        position: relative;
+        bottom: 3px;
+        width: 30px;
+    }
+    .main-content .buying-information form .warning-input img {
+        padding-left: 5px;
+        width: 20px;
+    }
+    .main-content .buying-information form .warning-input {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .main-content .buying-information form .warning-input2 {
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .main-content .buying-information form select {
+        height: 45px;
+        padding-right: 25px;
+    }
+    .main-content .buying-information form select:optional {
+        font-size: 14px;
+    }
+    .main-content .buying-information form .select-icon {
+        position: absolute;
+        left: 25px;
+        bottom: 15px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .main-content form label{
+        font-size: 14px;
+    }
+    .main-content form input{
+        font-size: 14px;
+    }
+    .main-content .buying-information .installment-calculator {
+        padding: 20px 25px;
+    }
+    .main-content .buying-information .installment-calculator h4 {
+        font-size: 14px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details span {
+        font-size: 12px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details span:not(:first-child) {
+        padding-right: 16px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span {
+        font-size: 14px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span span {
+        font-size: 10px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span:not(:first-child) {
+        padding-right: 26px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment h3 {
+        font-size: 12px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment p {
+        font-size: 14px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment p span {
+        font-size: 10px;
+    }
+    .main-content .buying-information .supplier-data {
+        padding: 20px 25px;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data i:first-child {
+        font-size: 16px;
+        padding-left: 15px;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data i:last-child {
+        font-size: 16px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details span:not(:last-child) {
+        padding-left: 4px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details span {
+        font-size: 12px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span {
+        font-size: 11px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span:not(:last-child) {
+        padding-left: 16px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span:first-child {
+        padding-left: 51px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect span {
+        font-size: 13px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect {
+        display: block;
+        align-items: center;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect .phone {
+        margin-left: 15px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect img {
+        width: 15px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data a {
+        font-size: 12px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .file-d img {
+        width: 18px;
+    }
+    .btn-primary-main {
+        transform: translateX(-50%);
+    }
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .main-content{
+        position: relative;
+        padding-right: 0px;
+        padding-top: 100px;
+    }
+    .main-content .buying-details{
+        width: 100%;
+    }
+    .main-content .container {
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-content .top-title-page {
+        padding-top: 20px;
+    }
+    .main-content .top-title-page h4 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    .main-content .top-title-page h6 {
+        font-size: 16px;
+        line-height: 15px;
+    }
+
+    .main-content .buying-details {
+        margin: 50px auto;
+    }
+    .main-content .buying-details h5 {
+        font-size: 18px !important;
+    }
+    .main-content .buying-details .buying-path::after {
+        width: 90%;
+        top: 0;
+        right: 5%;
+    }
+    .main-content .buying-details .names {
+        width: 100%;
+        right: 0;
+    }
+    .main-content .buying-details .numbers {
+        top: -40px;
+        width: 90%;
+        right: 5%;
+    }
+    .main-content .buying-details .buying-path span {
+        font-size: 14px;
+    }
+
+    .main-content .buying-details .names span::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #EBEBEB;
+        right: 25%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-details .names span:last-child::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #EBEBEB;
+        right: 45%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-details .names span.active {
+        font-size: 12px;
+    }
+
+    /*update path */
+    .main-content .buying-details .buying-path.DoneCheck1::before {
+        content: "";
+        width: 45%;
+        height: 5px;
+        background: #26B195;
+        position: absolute;
+        border-radius: 8px;
+        top: 0;
+        right: 5%;
+        z-index: 2;
+    }
+
+    .main-content .buying-details .names span:last-child::after {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #EBEBEB;
+        right: 45%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-details .names span.active {
+        font-size: 12px;
+    }
+    .main-content .buying-details .buying-path.DoneCheck1 .names span.active::after {
+        content: "";
+        width: 18px;
+        height: 18px;
+        background: #26B195;
+        right: 20%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    /* class active and Done check */
+    .main-content .buying-details .buying-path.DoneCheck1 .names span.active.DoneCheck::after{
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        width: 18px;
+        height: 18px;
+        background: #26B195;
+        right: 17%;
+        top: -33px;
+        font-size: 11.5px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+        color: #fff;
+        line-height: 17px;
+        box-shadow: 0 0px 0 4px rgba(38, 177, 149, 0.56);
+    }
+    /*end*/
+
+    .main-content .buying-information {
+        width: 100%;
+    }
+    .main-content .buying-information h5::after {
+        content: '';
+        width: 70%;
+        height: 1.4px;
+        background: #26B195;
+        position: absolute;
+        top: 55%;
+        left: 2%;
+    }
+    .main-content .buying-information form label {
+        font-size: 16px;
+        line-height : 35px;
+    }
+    .main-content .buying-information form input {
+        height: 50px;
+    }
+    .main-content .buying-information form input::placeholder {
+        font-size: 16px;
+    }
+    .main-content .buying-information form .form-group span.upload-file {
+        padding: 12px 22px;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    .main-content .buying-information form .form-group span.upload-file img {
+        padding-left: 5px;
+        position: relative;
+        bottom: 3px;
+        width: 30px;
+    }
+    .main-content .buying-information form .warning-input img {
+        padding-left: 10px;
+        width: 25px;
+    }
+    .main-content .buying-information form .warning-input {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .main-content .buying-information form .warning-input2 {
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .main-content .buying-information form select {
+        height: 50px;
+        padding-right: 25px;
+    }
+    .main-content .buying-information form select:optional {
+        font-size: 16px;
+    }
+    .main-content .buying-information form .select-icon {
+        position: absolute;
+        left: 25px;
+        bottom: 18px;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .main-content .buying-information .installment-calculator {
+        padding: 23px 28px;
+    }
+    .main-content .buying-information .installment-calculator h4 {
+        font-size: 16px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details span {
+        font-size: 14px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details span:not(:first-child) {
+        padding-right: 20px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span {
+        font-size: 16px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span span {
+        font-size: 12px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span:not(:first-child) {
+        padding-right: 30px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment h3 {
+        font-size: 14px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment p {
+        font-size: 16px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment p span {
+        font-size: 12px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment a {
+        font-size: 14px;
+    }
+    .main-content .buying-information .supplier-data {
+        padding: 23px 28px;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data i:first-child {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data i:last-child {
+        font-size: 18px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details span:not(:last-child) {
+        padding-left: 40px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details span {
+        font-size: 14px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span {
+        font-size: 14px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span:not(:last-child) {
+        padding-left: 40px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span:first-child {
+        padding-left: 88px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect span {
+        font-size: 14px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect {
+        display: flex;
+        align-items: center;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect .phone {
+        margin-left: 25px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect img {
+        width: 18px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data a {
+        font-size: 14px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .file-d img {
+        width: 20px;
+    }
+    .btn-primary-main {
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .main-content {
+        padding-right: 190px;
+        padding-top: 100px;
+    }
+
+    .main-content .container {
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-content .top-title-page {
+        padding-top: 25px;
+    }
+    .main-content .top-title-page h4 {
+        font-size: 25px;
+        line-height: 42px;
+    }
+    .main-content .top-title-page h6 {
+        font-size: 16px;
+        line-height: 15px;
+    }
+
+    .main-content .buying-details {
+        margin: 60px auto;
+    }
+    .main-content .buying-details h5 {
+        font-size: 20px !important;
+    }
+    .main-content .buying-details .buying-path::after {
+        width: 90%;
+        top: 0;
+        right: 5%;
+    }
+    .main-content .buying-details .names {
+        width: 100%;
+        right: 0;
+    }
+    .main-content .buying-details .numbers {
+        top: -40px;
+        width: 90%;
+        right: 5%;
+    }
+    .main-content .buying-details .buying-path span {
+        font-size: 16px;
+    }
+    .main-content .buying-details h5 {
+        font-size: 18px !important;
+    }
+    .main-content .buying-information h5::after {
+        content: '';
+        width: 65%;
+        height: 1.2px;
+        background: #26B195;
+        position: absolute;
+        top: 55%;
+        left: 2%;
+    }
+    .main-content .buying-information form .warning-input2 {
+        font-size: 13px;
+        line-height: 30px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .main-content{
+        position: relative;
+        padding-right: 259px;
+        padding-top: 100px;
+    }
+    .main-content .container {
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main-content .top-title-page{
+    }
+    .main-content .top-title-page h4{
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 52px;
+        color: #26B195;
+        padding-bottom: 5px;
+    }
+    .main-content .top-title-page h6 {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #26B195;
+    }
+    .main-content .top-title-page h6 span{
+        color: #979797;
+    }
+    .main-content .buying-details{
+        width: 53%;
+        margin: 40px auto;
+        text-align: center;
+        position: relative;
+    }
+    .main-content .buying-details h5{
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 34px;
+        color: #080D1B;
+    }
+    .main-content .buying-details .buying-path{
+        margin-top: 60px;
+        position: relative;
+    }
+    .main-content .buying-details .buying-path::after{
+        content: "";
+        width: 90%;
+        height: 5px;
+        background: #EBEBEB;
+        position: absolute;
+        border-radius: 8px;
+        top: 0;
+        right: 5%;
+    }
+    .main-content .buying-details .buying-path span{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #979797;
+        position: relative;
+    }
+
+    .main-content .buying-details .numbers{
+        position: relative;
+        top: -40px;
+        display: flex;
+        width:90%;
+        right: 5%;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-content .buying-details .numbers span.active {
+        color: #26B195;
+    }
+    .main-content .buying-details .names{
+        position: relative;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        right: 0;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-content .buying-details .names span{
+        position: relative;
+    }
+    .main-content .buying-details .names span.active{
+        font-weight: 700;
+        font-size: 14px;
+        color: #26B195;
+    }
+    .main-content .buying-details .names span.active.DoneCheck::after{
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        width: 20px;
+        height: 20px;
+        background: #26B195;
+        right: 20%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+        color: #fff;
+        line-height: 20px;
+        box-shadow: 0 0px 0 4px rgba(38, 177, 149, 0.56);
+    }
+    .main-content .buying-details .names span.active::after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #26B195;
+        right: 20%;
+        top: -33px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+        color: #fff;
+        line-height: 20px;
+    }
+    .main-content .buying-details .names span::after{
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: #EBEBEB;
+        right: 15%;
+        top: -32px;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 99;
+        border: 2px solid #fff;
+    }
+    .main-content .buying-information{
+        padding-top: 48px;
+        text-align: right;
+        width: 95%;
+        position: relative;
+    }
+    .main-content .buying-information h5{
+        color: #26B195;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 34px;
+        color: #26B195;
+        position: relative;
+    }
+    .main-content .buying-information h5::after{
+        content: '';
+        width: 60%;
+        height: 1.3px;
+        background: #26B195;
+        position: absolute;
+        top: 55%;
+        left: 0;
+    }
+    .main-content .buying-information form{
+        position: relative;
+    }
+    .main-content .buying-information form .form-group{
+        margin-top: 25px;
+        position: relative;
+    }
+    .main-content .buying-information form label{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #1C2E5A;
+    }
+    .main-content .buying-information form input{
+        height: 55px;
+        border-radius: 27.5px;
+        background: #F1F1F1;
+        border: 1.5px solid #26B195;
+        box-sizing: border-box;
+        padding-right: 35px;
+        margin-top: 10px;
+    }
+    .main-content .buying-information form input::placeholder{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #979797;
+    }
+    .main-content .buying-information form .form-group span.upload-file{
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        background: #26B195;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 27px;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+    .main-content .buying-information form .form-group span.upload-file img{
+        padding-left: 5px;
+        position: relative;
+        bottom: 3px;
+    }
+    .main-content .buying-information form .warning-input{
+        padding-top: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #979797;
+    }
+    .main-content .buying-information form .warning-input img{
+        padding-left: 10px;
+    }
+    .main-content .buying-information form .warning-input2{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #979797;
+        padding-top: 12px;
+
+    }
+    .main-content .buying-information form select{
+        height: 55px;
+        border-radius: 27.5px;
+        background: #F1F1F1;
+        border: 1.5px solid #26B195;
+        box-sizing: border-box;
+        padding-right: 35px;
+        margin-top: 10px;
+    }
+    .main-content .buying-information form select:optional{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        color: #979797;
+    }
+    .main-content .buying-information form .select-icon{
+        position: absolute;
+        left: 38px;
+        bottom: 20px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .main-content .buying-information .installment-calculator{
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid #C7C7C7;
+        padding: 25px 27px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+
+    }
+    .main-content .buying-information .installment-calculator h4{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 30px;
+        color: #26B195;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details{
+        padding-bottom: 5px;
+        padding-top: 10px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details span{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #979797;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .head-details span:not(:first-child) {
+        padding-right: 36px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 34px;
+        color: #26B195;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span:not(:first-child) {
+        padding-right: 36px;
+    }
+    .main-content .buying-information .installment-calculator .details-buying-calculator .body-details span.main-span span{
+        font-size: 12px;
+    }
+    .installment-calculator .details-buying-calculator .body-details  .cl-plus{
+        color: #979797;
+        position: relative;
+        right: 20px;
+    }
+    .installment-calculator .details-buying-calculator .body-details  .cl-equal{
+        color: #979797;
+        position: relative;
+        right: 20px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment{
+        padding-top: 25px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment h3{
+        font-weight: 400;
+        font-size: 14px;
+        color: #979797;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment a{
+        font-weight: 500;
+        font-size: 12px;
+        text-decoration-line: underline;
+        color: #379BC4;
+        padding-right: 14px;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment p {
+        font-weight: 500;
+        font-size: 18px;
+        color: #26B195;
+        margin-bottom: 0;
+    }
+    .main-content .buying-information .installment-calculator .monthly-installment p span{
+        font-size: 12px;
+
+    }
+    .main-content .buying-information .supplier-data{
+        position: relative;
+        border-radius: 20px;
+        border: 1px solid #C7C7C7;
+        padding: 25px 27px;
+        margin-top: 32px;
+        margin-bottom: 40px;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data{
+        text-align: left;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data i:first-child{
+        color: #263238;
+        font-size: 18px;
+        padding-left: 22px;
+    }
+    .main-content .buying-information .supplier-data .icons-supplier-data i:last-child{
+        color: #EE4D42;
+        font-size: 18px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data{
+        padding-bottom: 33px;
+        border-bottom: 1px solid #DADADA;
+        width: fit-content;
+        padding-top: 15px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data h4{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        color: #1C2E5A;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details{
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details span{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #979797;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .head-details span:not(:last-child){
+        padding-left: 46px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        color: #26B195;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span:not(:last-child){
+        padding-left: 46px;
+    }
+    .main-content .buying-information .supplier-data .details-supplier-data .body-details span:first-child {
+        padding-left: 91px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect{
+        display: flex;
+        align-items: center;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect .phone{
+        margin-left: 30px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect span{
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 26px;
+        color: #26B195;
+        padding-right: 7px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data .details-connect img {
+        width: 20px;
+        height: 18px;
+    }
+    .main-content .buying-information .supplier-data  .details-supplier-data a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        text-align: right;
+        text-decoration-line: underline;
+        color: #379BC4;
+        margin-right: 10px;
+    }
+    .btn-primary-main{
+        background: #26B195;
+        border-radius: 27.5px;
+        color: #fff;
+        padding: 13px 45px;
+        text-align: center;
+        position: relative;
+        left: 0;
+        transform: translateX(-100%);
+        margin-top: 15px;
+    }
+    .btn-primary-main i{
+        font-size: 11px;
+        padding-right: 25px;
+    }
+    .btn-primary-main:hover{
+        color : #26B195;
+        border: 1px solid #26B195;
+
+    }
+}
+
+/* ===End::Content Page === */
+/* ===Begin::Footer === */
+footer{
+    position: relative;
+    padding-right: 259px;
+    background: #F7F7F7;
+    padding-top:51px;
+    padding-bottom: 41px;
+    margin-top: 215px;
+}
+footer .top-title-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    padding-bottom: 13px;
+}
+footer .top-title-footer h5{
+    font-weight: 400;
+    font-size: 24px;
+    color: #26B195;
+}
+footer .top-title-footer  .info-footer span{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 45px;
+    color: #7E7E7E;
+}
+footer .top-title-footer  .info-footer span:first-child{
+    padding-left: 28px;
+}
+footer .top-title-footer ul{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 0;
+    margin-bottom: 0;
+}
+footer .top-title-footer ul a i{
+    color: #080D1B;
+    font-size: 22px;
+}
+footer .description-footer{
+    padding-top: 30px;
+}
+footer .description-footer .top-desc{
+    font-weight: 400;
+    font-size: 14px;
+    color: #676767;
+}
+footer .description-footer .description{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #676767;
+    padding-right: 15px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+footer .description-footer .last-description{
+    font-weight: 400;
+    font-size: 14px;
+    color: #676767;
+    padding-top: 0;
+    margin-top: 0;
+}
+footer .final-footer{
+    display: flex;
+    justify-content: space-between;
+}
+footer .final-footer .first-last-footer{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #676767;
+}
+footer .final-footer .last-main-footer{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #26B195;
+}
+/*  Style Responsive --Footer--  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    footer{
+        padding-right: 0px;
+    }
+    footer .container {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .top-title-footer {
+        display: inline-block;
+    }
+    footer .top-title-footer h5 {
+        font-size: 20px;
+    }
+    footer .top-title-footer  .info-footer{
+        padding-bottom: 8px;
+    }
+    footer .top-title-footer  .info-footer span:first-child {
+        padding-left: 18px;
+    }
+    footer .top-title-footer  .info-footer span {
+        font-size: 18px;
+    }
+    footer .top-title-footer ul {
+        justify-content: space-around;
+    }
+    footer .top-title-footer ul a i {
+        font-size: 18px;
+    }
+
+    footer .description-footer .top-desc {
+        font-size: 12px;
+    }
+    footer .description-footer .description {
+        font-size: 12px;
+    }
+    footer .description-footer .last-description {
+        font-size: 12px;
+    }
+    footer .final-footer {
+        display: inline-block;
+    }
+    footer .final-footer .first-last-footer {
+        font-size: 12px;
+        line-height: 16px;
+        display: block;
+        padding-bottom: 6px;
+    }
+    footer .final-footer .last-main-footer {
+        font-weight: 400;
+        font-size: 12px;
+        color: #26B195;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    footer{
+        padding-right: 0px;
+    }
+    footer .container {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .top-title-footer h5 {
+        font-size: 20px;
+        margin-left: 20px;
+
+    }
+    footer .top-title-footer  .info-footer{
+    }
+    footer .top-title-footer  .info-footer span:first-child {
+        padding-left: 10px;
+    }
+    footer .top-title-footer  .info-footer span {
+        font-size: 14px;
+    }
+
+    footer .top-title-footer ul {
+        gap: 16px;
+        justify-content: space-around;
+    }
+    footer .top-title-footer ul a i {
+        font-size: 14px;
+    }
+
+    footer .description-footer .top-desc {
+        font-size: 14px;
+    }
+    footer .description-footer .description {
+        font-size: 14px;
+    }
+    footer .description-footer .last-description {
+        font-size: 14px;
+    }
+    footer .final-footer {
+        display: flex;
+    }
+    footer .final-footer .first-last-footer {
+        font-size: 13px;
+        line-height: 20px;
+        display: block;
+        padding-left: 20px;
+    }
+    footer .final-footer .last-main-footer {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    footer{
+        padding-right: 0px;
+    }
+    footer {
+        padding-right: 190px;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    footer{
+        position: relative;
+        padding-right: 259px;
+        background: #F7F7F7;
+        padding-top:51px;
+        padding-bottom: 41px;
+        margin-top: 215px;
+    }
+    footer .container {
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    footer .top-title-footer{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #000;
+        padding-bottom: 13px;
+    }
+    footer .top-title-footer h5{
+        font-weight: 400;
+        font-size: 24px;
+        color: #26B195;
+    }
+    footer .top-title-footer  .info-footer span{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 45px;
+        color: #7E7E7E;
+    }
+    footer .top-title-footer  .info-footer span:first-child{
+        padding-left: 28px;
+    }
+    footer .top-title-footer ul{
+        display: flex;
+        align-items: center;
+        gap: 26px;
+        padding: 0;
+        margin-bottom: 0;
+    }
+    footer .top-title-footer ul a i{
+        color: #080D1B;
+        font-size: 22px;
+    }
+    footer .description-footer{
+        padding-top: 30px;
+    }
+    footer .description-footer .top-desc{
+        font-weight: 400;
+        font-size: 14px;
+        color: #676767;
+    }
+    footer .description-footer .description{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #676767;
+        padding-right: 15px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    footer .description-footer .last-description{
+        font-weight: 400;
+        font-size: 14px;
+        color: #676767;
+        padding-top: 0;
+        margin-top: 0;
+    }
+    footer .final-footer{
+        display: flex;
+        justify-content: space-between;
+    }
+    footer .final-footer .first-last-footer{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #676767;
+    }
+    footer .final-footer .last-main-footer{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        color: #26B195;
+    }
+}
+/* ===End::Footer === */
