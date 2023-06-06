@@ -78,7 +78,7 @@
 
                 </button>
                 <button class="btn btn-primary-main-tow">
-                    <a href="page3.html">
+                    <a href="{{ route("page3") }}">
                         التالي
                         <i class="fa-solid fa-chevron-left"></i>
                     </a>
